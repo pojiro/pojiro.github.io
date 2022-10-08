@@ -1,20 +1,20 @@
 ---
 layout: post
 title:  "2022/10/08"
-categories: jekyll update
+categories: jekyll dev
 ---
 
 開発ノートをできるだけ簡単に残しかつ公開する方法を模索していて、そのテストの一つとして [Github Pages](https://docs.github.com/ja/pages) を試す。
 
 欲しいのは、
 
-* vim でがしがし書けること
-* プレビューでき、ライブリロードが効くこと
-* 即時公開ができること
+* vim でがしがし書けること: md をvimで書くのみ
+* プレビューでき、ライブリロードが効くこと: Makefile を作った
+* 即時公開ができること: github への push で可能
+* 画像の添付が楽なこと: github でコピペ
 * 検索が効くこと
-* 画像の添付が楽なこと
 
-で後半２つ以外はぱっと試しで確認ができた。
+で最後以外はぱっと試しで確認ができた。
 
 ### テスト画像の添付
 
@@ -40,10 +40,18 @@ $ bundle exec jekyll serve --livereload
 
 > By default, Jekyll uses the GitHub Flavored Markdown (GFM) processor for Kramdown. 
 
-see. https://jekyllrb.com/docs/configuration/markdown/#kramdown
+see. <https://jekyllrb.com/docs/configuration/markdown/#kramdown>
 
 #### 困りごと
 
-* 生で記述するリンクが有効にならない。これはなんとかならないかな、めんどい。
+* ~~生で記述するリンクが有効にならない。これはなんとかならないかな、めんどい。~~
+  *  <> でくくるとリンクになる
 * 目次をつけたい
+* この方向で進めてよいか不安だ
 
+
+### 参考
+
+* [CommonMarkの仕様とか](https://qiita.com/Prof-Cheese/items/9629438b06aacc068c98)
+* [Web Scratch](https://efcl.info/)
+  * azu さんの <https://github.com/efcl/efcl.github.io> ソースが勉強になりそう
