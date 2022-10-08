@@ -24,11 +24,12 @@ kramdown:
 title: Tombo Notes
 email: nil
 description: >- # this means to ignore newlines until "baseurl:"
-  Copyright (c) Tombo Works 2022.
+  調べた、試したことのノート
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: pojiro3
 github_username:  pojiro
+permalink: /:year/:month/:day/:title:output_ext
 
 # Build settings
 theme: minima
