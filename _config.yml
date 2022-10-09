@@ -18,9 +18,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-kramdown:
-  input: GFM
-
 title: Tombo Notes
 email: nil
 description: >- # this means to ignore newlines until "baseurl:"
@@ -32,10 +29,15 @@ github_username:  pojiro
 permalink: /:year/:month/:day/:title:output_ext
 
 highlighter: rouge
+markdown: CommonMark
+commonmark:
+  options: ["FOOTNOTES"]
+  extensions: ["autolink", "strikethrough", "table", "tasklist"]
 
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-commonmark
 
 # jekyll-paginate
 paginate: 5
