@@ -31,8 +31,6 @@ twitter_username: pojiro3
 github_username:  pojiro
 permalink: /:year/:month/:day/:title:output_ext
 
-# Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
