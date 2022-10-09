@@ -34,11 +34,6 @@ commonmark:
   options: ["FOOTNOTES"]
   extensions: ["autolink", "strikethrough", "table", "tasklist"]
 
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-commonmark
-
 # jekyll-paginate
 paginate: 5
 paginate_path: "page/:num"
