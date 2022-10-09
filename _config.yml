@@ -35,6 +35,11 @@ permalink: /:year/:month/:day/:title:output_ext
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+# jekyll-paginate
+paginate: 5
+paginate_path: "page/:num"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
