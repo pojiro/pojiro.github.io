@@ -61,3 +61,6 @@ paginate_path: "page/:num"
 exclude:
   - Makefile
   - README.md
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
