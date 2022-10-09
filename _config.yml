@@ -28,7 +28,6 @@ twitter_username: pojiro3
 github_username:  pojiro
 permalink: /:year/:month/:day/:title:output_ext
 
-highlighter: rouge
 markdown: CommonMark
 commonmark:
   options: ["FOOTNOTES"]
