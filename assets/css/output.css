@@ -1223,6 +1223,11 @@ video {
   --tw-prose-invert-td-borders: #404040;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .prose-headings\:underline :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *))) {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
