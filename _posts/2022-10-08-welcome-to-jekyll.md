@@ -40,12 +40,13 @@ $ bundle exec jekyll serve --livereload
 
 > By default, Jekyll uses the GitHub Flavored Markdown (GFM) processor for Kramdown. 
 
-see. <https://jekyllrb.com/docs/configuration/markdown/#kramdown>
+see. https://jekyllrb.com/docs/configuration/markdown/#kramdown
 
 #### 困りごと
 
 * ~~生で記述するリンクが有効にならない。これはなんとかならないかな、めんどい。~~
-  *  <> でくくるとリンクになる
+  * kramdonw の場合、 <> でくくるとリンクになる
+  * commonmark の場合、 extensions に autolink を入れると使えるようになる
 * 目次をつけたい
 * この方向で進めてよいか不安だ
 
