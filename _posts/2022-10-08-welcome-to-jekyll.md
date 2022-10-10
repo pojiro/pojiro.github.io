@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2022/10/08"
-categories: jekyll dev
+categories: jekyll
 ---
 
 開発ノートをできるだけ簡単に残しかつ公開する方法を模索していて、そのテストの一つとして [Github Pages](https://docs.github.com/ja/pages) を試す。
