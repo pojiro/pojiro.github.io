@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2022/10/08"
+title:  "2022-10-08"
 category: 開発日誌
 tags: jekyll
 ---
