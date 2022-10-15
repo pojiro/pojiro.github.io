@@ -1295,10 +1295,6 @@ video {
   flex-shrink: 0;
 }
 
-.list-disc {
-  list-style-type: disc;
-}
-
 .justify-center {
   justify-content: center;
 }
