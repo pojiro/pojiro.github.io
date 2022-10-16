@@ -1,20 +1,20 @@
 # Site settings
-title: Tombo Notes
+title: "Tombo Notes"
 email: nil
 description: >- # this means to ignore newlines until "baseurl:"
   調べた、試したことのノート
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pojiro.github.io"
-twitter_username: pojiro3
-github_username:  pojiro
+twitter_username: "pojiro3"
+github_username: "pojiro"
 icon: "/favicon.ico"
 
 # Global Configuration
 safe: false
 disable_disk_cache: false
 ignore_theme_config: true
-timezone: Asia/Tokyo
-encoding: utf-8
+timezone: "Asia/Tokyo"
+encoding: "utf-8"
 exclude:
   # default
   - .sass-cache/
