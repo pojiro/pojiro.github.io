@@ -7,6 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pojiro.github.io"
 twitter_username: pojiro3
 github_username:  pojiro
+icon: "/favicon.ico"
 
 # Global Configuration
 safe: false
