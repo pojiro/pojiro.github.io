@@ -4,7 +4,7 @@ email: nil
 description: >- # this means to ignore newlines until "baseurl:"
   調べた、試したことのノート
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pojiro.github.io/"
+url: "https://pojiro.github.io"
 twitter_username: pojiro3
 github_username:  pojiro
 
