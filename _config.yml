@@ -5,8 +5,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   調べた、試したことのノート
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pojiro.github.io"
-twitter_username: "pojiro3"
-github_username: "pojiro"
 icon: "/favicon.ico"
 
 # Global Configuration
@@ -43,11 +41,6 @@ commonmark:
   options: ["FOOTNOTES"]
   extensions: ["autolink", "strikethrough", "table", "tasklist"]
 
-# Plugin Options
-## jekyll-paginate
-paginate: 5
-paginate_path: "page/:num"
-
 # Build Command Options
 show_drafts: false
 future: false
@@ -60,3 +53,15 @@ incremental: true
 profile: true
 strict_front_matter: true
 
+# Plugin Options
+## jekyll-paginate
+paginate: 5
+paginate_path: "page/:num"
+## jekyll-seo-tag
+author:
+  name: "pojiro"
+  url: "https://github.com/pojiro"
+twitter:
+  username: "pojiro3"
+  card: "summary"
+locale: "ja_JP"
