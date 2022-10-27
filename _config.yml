@@ -56,7 +56,7 @@ strict_front_matter: true
 
 # Plugin Options
 ## jekyll-paginate
-paginate: 5
+paginate: 7
 paginate_path: "page/:num"
 ## jekyll-seo-tag
 author:
