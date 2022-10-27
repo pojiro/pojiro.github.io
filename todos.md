@@ -31,6 +31,7 @@ permalink: /todos
 * [Nerves Project](https://opencollective.com/nerves-project) のスポンサーになる
 * キーボード作成
   * [scad-clj](https://github.com/farrellm/scad-clj) のクローン scad-ex を作り外装を出力できるようにする。
+    * [OpenSCAD](https://openscad.org/index.html)
 * [Raspberry Pi 400](https://www.raspberrypi.com/products/raspberry-pi-400/) を HDMI 出力できるようにし、プログラミング教材として使えるを Nerves を作る。
 
 ### Vim
