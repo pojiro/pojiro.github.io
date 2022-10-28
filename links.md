@@ -40,6 +40,7 @@ see. https://github.com/actions/jekyll-build-pages/issues/46#issuecomment-121550
 ### tmux
 
 * [tmuxチートシート](https://qiita.com/nmrmsys/items/03f97f5eabec18a3a18b)
+* [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 
 ### vim
 
