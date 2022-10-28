@@ -1,4 +1,4 @@
-serve: clean
+serve: clean tailwind
 	bundle exec jekyll serve --livereload
 
 build: clean
@@ -6,7 +6,7 @@ build: clean
 
 tailwind:
 	rm -rf assets/css/output.css
-	npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch
+	npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css
 
 clean:
 	rm -rf _site
