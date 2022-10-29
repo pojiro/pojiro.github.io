@@ -46,6 +46,7 @@ see. https://github.com/actions/jekyll-build-pages/issues/46#issuecomment-121550
 
 * [ヘルプの引き方](https://vim-jp.org/vimdoc-ja/usr_02.html#02.8)
   * `:help 02.8`
+* [vim-prettier](https://github.com/prettier/vim-prettier)
 
 ### ASCII Art
 
