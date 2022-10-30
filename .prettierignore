@@ -1,0 +1,5 @@
+_site/
+
+# WHY: ignroe HTML files
+# liquid を含み、適切に format されないため
+*.html
