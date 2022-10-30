@@ -50,7 +50,7 @@ lsi: false
 force_polling: false
 verbose: true
 quiet: false
-incremental: true
+incremental: false
 profile: true
 strict_front_matter: true
 
