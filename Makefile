@@ -4,9 +4,9 @@ serve: clean tailwind
 build: clean
 	JEKYLL_ENV=production bundle exec jekyll build
 
-eswatch:
+fwatch:
 	rm -rf ./assets/css/output.css
-	eswatch
+	fwatch
 
 tailwind:
 	npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css
