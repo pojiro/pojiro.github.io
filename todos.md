@@ -30,7 +30,7 @@ permalink: /todos
 
 - [Nerves Project](https://opencollective.com/nerves-project) のスポンサーになる
 - キーボード作成
-  - [scad-clj](https://github.com/farrellm/scad-clj) のクローン scad-ex を作り外装を出力できるようにする。
+  - [scad-clj](https://github.com/farrellm/scad-clj) のクローン `scad-ex` を作り外装を出力できるようにする。
     - [OpenSCAD](https://openscad.org/index.html)
 - [Raspberry Pi 400](https://www.raspberrypi.com/products/raspberry-pi-400/) を HDMI 出力できるようにし、プログラミング教材として使えるを Nerves を作る。
 
@@ -40,7 +40,7 @@ permalink: /todos
 
 ### 挑戦的な開発
 
-- `mix file.watch` の開発
+- `scad-ex` の開発
 - [usbip-win](https://github.com/cezanne/usbip-win) の別実装
   - [usbipd-win](https://github.com/dorssel/usbipd-win)
 - [DNS サーバ](https://e-words.jp/w/DNS%E3%82%B5%E3%83%BC%E3%83%90.html)を Elixir で実装してみる
