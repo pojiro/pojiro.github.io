@@ -40,6 +40,10 @@ permalink: /todos
 
 ### 挑戦的な開発
 
+- `ex_doc` as CMS の開発
+  - 日本語検索機能
+  - live reload
+  - module sorting
 - `scad-ex` の開発
 - [usbip-win](https://github.com/cezanne/usbip-win) の別実装
   - [usbipd-win](https://github.com/dorssel/usbipd-win)
