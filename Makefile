@@ -11,7 +11,10 @@ fwatch:
 tailwind:
 	npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css
 
+update:
+	npm update tailwindcss
+
 clean:
 	rm -rf _site
 
-.PHONY: serve build tailwind clean
+.PHONY: serve build tailwind update clean
