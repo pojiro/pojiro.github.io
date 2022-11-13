@@ -11,8 +11,33 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
-    {% include header.html %}
-    {{ content }}
-    {% include footer.html %}
+    <div class="flex flex-row">
+      <aside class="flex flex-col w-72 bg-slate-900 text-slate-400" x-data="{ tabNames: ['PAGES', 'LINKS', 'TECHS'], activeTab: 'PAGES' }">
+        <div class="mx-3 mt-3 bg-slate-800">
+          <form>
+            <label>
+              <p class="sr-only">Search</p>
+              <input type="text" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" class="form-input w-full bg-inherit"/>
+            </label>
+          </form>
+        </div>
+        <div class="h-24 mx-3 mt-3 bg-slate-800">
+          <div class="ml-2.5 mt-1.5">
+            <a href="{{ site.baseurl }}/" class="font-bold text-xl text-slate-50">tombo_notes</a>
+            <p class="font-light">v0.0.0</p>
+          </div>
+          <nav aria-label="Tabs" class="flex flex-nowrap pt-3">
+            <template x-for="tabName in tabNames">
+            <button class="px-2.5 font-light text-sm hover:border-b-[3px] hover:border-violet-400 hover:text-slate-50" x-on:click="activeTab = tabName" x-bind:class="activeTab === tabName ? 'border-b-[3px] border-violet-400 text-slate-50' : ''" x-text="tabName"></button>
+            </template>
+          </nav>
+        </div>
+      </aside>
+      <main class="flex-1">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+      </main>
+    </div>
   </body>
 </html>
