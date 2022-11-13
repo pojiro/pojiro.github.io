@@ -32,6 +32,9 @@
             </template>
           </nav>
         </div>
+        <div x-show="activeTab === 'PAGES'">PAGES</div>
+        <div x-show="activeTab === 'LINKS'">LINKS</div>
+        <div x-show="activeTab === 'TECHS'">TECHS</div>
       </aside>
       <main class="flex-1">
       {% include header.html %}
