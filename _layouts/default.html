@@ -32,7 +32,25 @@
             </template>
           </nav>
         </div>
-        <div x-show="activeTab === 'PAGES'">PAGES</div>
+        <div x-show="activeTab === 'PAGES'">
+        {% assign year_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
+        {% for year_group in year_groups %}
+          <ul x-data="{ yearOpen: false}">
+            <li @click="yearOpen = ! yearOpen">{{ year_group.name }} ({{ year_group.items.size }})</li>
+            {% assign month_groups = year_group.items | group_by_exp: "post", "post.date | date: '%Y-%m'"  %}
+            {% for month_group in month_groups %}
+            <ul x-show="yearOpen" x-data="{ monthOpen: false}">
+              <li @click="monthOpen = ! monthOpen">{{ month_group.name }} ({{ month_group.items.size }})</li>
+              <ul>
+                {% for post in month_group.items %}
+                <li x-show="monthOpen"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </ul>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+        </div>
         <div x-show="activeTab === 'LINKS'">LINKS</div>
         <div x-show="activeTab === 'TECHS'">TECHS</div>
       </aside>
