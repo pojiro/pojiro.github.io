@@ -22,9 +22,12 @@
           </form>
         </div>
         <div class="h-24 mx-3 mt-3 bg-slate-800">
-          <div class="ml-2.5 mt-1.5">
-            <a href="{{ site.baseurl }}/" class="font-bold text-xl text-slate-50">tombo_notes</a>
-            <p class="font-light">v0.0.0</p>
+          <div>
+            <img src="/assets/images/logo.png" alt="Tombo Notes Logo" class="inline-block align-bottom h-12 w-12 ml-2.5">
+            <div class="inline-block mt-1.5 ml-2.5">
+              <p><a href="{{ site.baseurl }}/" class="font-bold text-xl text-slate-50">Tombo Notes</a></p>
+              <p class="font-light text-white"><span class="text-[8px]">▼</span>v0.0.0</p>
+            </div>
           </div>
           <nav aria-label="Tabs" class="flex flex-nowrap pt-3">
             <template x-for="tabName in tabNames">
