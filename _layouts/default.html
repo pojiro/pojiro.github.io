@@ -46,7 +46,12 @@
               <li x-on:click="monthOpen = ! monthOpen">{{ month_group.name }} ({{ month_group.items.size }})</li>
               <ul>
                 {% for post in month_group.items %}
-                <li x-show="monthOpen"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                <li x-show="monthOpen">
+                  <a href="{{ post.url }}"
+                     x-bind:class="location.pathname === '{{post.url}}' ? 'text-white' : ''"
+                     x-init="if (location.pathname === '{{post.url}}') { yearOpen = monthOpen = true }"
+                  >{{ post.title }}</a>
+                </li>
                 {% endfor %}
               </ul>
             </ul>
