@@ -12,31 +12,35 @@
   </head>
   <body>
     <div class="flex flex-row">
-      <aside class="flex flex-col w-72 bg-slate-900 text-slate-400" x-data="{ tabNames: ['PAGES', 'LINKS', 'TECHS'], activeTab: 'PAGES' }">
-        <div class="mx-3 mt-3 bg-slate-800">
+      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light overflow-hidden" x-data="{ tabNames: ['PAGES', 'LINKS', 'TECHS'], activeTab: 'PAGES' }">
+        <div class="mt-[12px]">
           <form>
             <label>
               <p class="sr-only">Search</p>
-              <input type="text" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" class="form-input w-full bg-inherit"/>
+              <input type="text" placeholder="Not implemented..." aria-label="Input your search terms" autocomplete="off" class="ml-[12px] pl-[38px] py-[8px] pr-[6px] form-input bg-slate-800"/>
             </label>
           </form>
         </div>
-        <div class="h-24 mx-3 mt-3 bg-slate-800">
+        <div class="m-[12px] bg-slate-800">
           <div>
             <img src="/assets/images/logo.png" alt="Tombo Notes Logo" class="inline-block align-bottom h-12 w-12 ml-2.5">
             <div class="inline-block mt-1.5 ml-2.5">
               <p><a href="{{ site.baseurl }}/" class="font-bold text-xl text-slate-50">Tombo Notes</a></p>
-              <p class="font-light text-white"><span class="text-[8px]">▼</span>v0.0.0</p>
+              <p class="text-white"><span class="text-[8px]">🤍</span>vD.E.V</p>
             </div>
           </div>
           <nav aria-label="Tabs" class="flex flex-nowrap pt-3">
             <template x-for="tabName in tabNames">
-            <button class="px-2.5 font-light text-sm hover:border-b-[3px] hover:border-violet-400 hover:text-slate-50" x-on:click="activeTab = tabName" x-bind:class="activeTab === tabName ? 'border-b-[3px] border-violet-400 text-slate-50' : ''" x-text="tabName"></button>
+            <button class="px-2.5 text-sm text-slate-400 hover:border-b-[3px] hover:border-violet-400 hover:text-slate-50"
+                    x-on:click="activeTab = tabName"
+                    x-bind:class="activeTab === tabName ? 'border-b-[3px] border-violet-400 text-slate-50' : 'border-b-[3px] border-transparent'"
+                    x-text="tabName">
+            </button>
             </template>
           </nav>
         </div>
         <div x-show="activeTab === 'PAGES'">
-          <ul>
+          <ul class="pt-[20px]">
             {% assign page_names = "todos,wants" | split: "," %}
             {% for page_name in page_names %}
             <li class="py-[3px]">
@@ -59,7 +63,7 @@
                     {% for post in month_group.items %}
                     <li class="ml-[8px] px-[10px]"
                         x-show="monthOpen"
-                        x-bind:class="location.pathname === '{{post.url}}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-600'"
+                        x-bind:class="location.pathname === '{{post.url}}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700'"
                         x-init="if (location.pathname === '{{post.url}}') { yearOpen = monthOpen = true }"
                     >
                       <a href="{{ post.url }}" class="py-[3px]" >{{ post.title }}</a>
