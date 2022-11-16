@@ -37,8 +37,15 @@
         </div>
         <div x-show="activeTab === 'PAGES'">
           <ul>
-            <li class="pl-[15px] py-[3px]">TODOS</li>
-            <li class="pl-[15px] font-bold text-slate-400">POSTS</li>
+            {% assign page_names = "todos,wants" | split: "," %}
+            {% for page_name in page_names %}
+            <li class="py-[3px]">
+              <a href="/{{ page_name }}"
+                 x-bind:class="'/{{ page_name }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
+              >{{ page_name | capitalize }}</a>
+            </li>
+            {% endfor %}
+            <li class="pl-[15px] mt-[25px] font-bold text-slate-400">Posts</li>
             {% assign year_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
             {% for year_group in year_groups %}
             <li class="mr-[30px]" x-data="{ yearOpen: false }">
