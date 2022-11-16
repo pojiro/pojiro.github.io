@@ -36,28 +36,35 @@
           </nav>
         </div>
         <div x-show="activeTab === 'PAGES'">
-        {% assign year_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
-        {% for year_group in year_groups %}
-            <li x-on:click="yearOpen = ! yearOpen">{{ year_group.name }} ({{ year_group.items.size }})</li>
-          <ul x-data="{ yearOpen: false }">
-            {% assign month_groups = year_group.items | group_by_exp: "post", "post.date | date: '%Y-%m'"  %}
-            {% for month_group in month_groups %}
-            <ul x-show="yearOpen" x-data="{ monthOpen: false }">
-              <li x-on:click="monthOpen = ! monthOpen">{{ month_group.name }} ({{ month_group.items.size }})</li>
-              <ul>
-                {% for post in month_group.items %}
-                <li x-show="monthOpen">
-                  <a href="{{ post.url }}"
-                     x-bind:class="location.pathname === '{{post.url}}' ? 'text-white' : ''"
-                     x-init="if (location.pathname === '{{post.url}}') { yearOpen = monthOpen = true }"
-                  >{{ post.title }}</a>
+          <ul>
+            <li class="pl-[15px] py-[3px]">TODOS</li>
+            <li class="pl-[15px] font-bold text-slate-400">POSTS</li>
+            {% assign year_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
+            {% for year_group in year_groups %}
+            <li class="mr-[30px]" x-data="{ yearOpen: false }">
+              <span class="py-[3px]" x-on:click="yearOpen = ! yearOpen" x-bind:class="yearOpen ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'">{{ year_group.name }} ({{ year_group.items.size }})</span>
+              {% assign month_groups = year_group.items | group_by_exp: "post", "post.date | date: '%Y-%m'"  %}
+              <ul class="ml-[10px] my-[9px]" x-show="yearOpen">
+                {% for month_group in month_groups %}
+                <li class="px-[8px] py-[2px]" x-data="{ monthOpen: false }">
+                  <span class="pl-[15px] py-[3px]" x-on:click="monthOpen = ! monthOpen" x-bind:class="monthOpen ? 'text-violet-400' : ''">{{ month_group.name }} ({{ month_group.items.size }})</span>
+                  <ul class="ml-[10px] my-[9px]" x-bind:class="monthOpen ? 'block' : 'hidden'">
+                    {% for post in month_group.items %}
+                    <li class="ml-[8px] px-[10px]"
+                        x-show="monthOpen"
+                        x-bind:class="location.pathname === '{{post.url}}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-600'"
+                        x-init="if (location.pathname === '{{post.url}}') { yearOpen = monthOpen = true }"
+                    >
+                      <a href="{{ post.url }}" class="py-[3px]" >{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
                 </li>
                 {% endfor %}
               </ul>
-            </ul>
             {% endfor %}
+            </li>
           </ul>
-        {% endfor %}
         </div>
         <div x-show="activeTab === 'LINKS'">LINKS</div>
         <div x-show="activeTab === 'TECHS'">TECHS</div>
