@@ -82,7 +82,7 @@
                     {% for month_group in month_groups %}
                     <li class="px-[8px] py-[2px]" x-data="{ openMonth: selectedMonth === '{{ month_group.name }}' }">
                       <span class="cursor-pointer pl-[15px] py-[3px]"
-                            x-on:click="selectedMonth = '{{ month_group.name }}'; openMonth = true"
+                            x-on:click="openMonth = true"
                             x-bind:class="selectedMonth === '{{ month_group.name }}' ? 'text-violet-400' : ''"
                       >{{ month_group.name }} ({{ month_group.items.size }})</span>
                       <button class="absolute right-[0px]"
