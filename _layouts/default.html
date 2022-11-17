@@ -99,8 +99,8 @@
                       <ul class="ml-[10px] my-[9px]" x-show="openMonth" x-transition>
                         {% for post in month_group.items %}
                         <li class="ml-[8px] px-[10px]"
-                            x-bind:class="location.pathname === '{{post.url}}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700'"
-                            x-init="if (location.pathname === '{{post.url}}') { selectedYear = '{{ year_group.name }}'; selectedMonth = '{{ month_group.name }}' }"
+                            x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700'"
+                            x-init="if ('{{ page.url }}' === '{{post.url}}') { selectedYear = '{{ year_group.name }}'; selectedMonth = '{{ month_group.name }}' }"
                         ><a href="{{ post.url }}" class="py-[3px]" >{{ post.title }}</a>
                         </li>
                         {% endfor %}
