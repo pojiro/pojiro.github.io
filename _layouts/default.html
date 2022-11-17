@@ -49,7 +49,7 @@
             </template>
           </nav>
         </div>
-        <div x-show="activeTab === 'PAGES'">
+        <div x-show="activeTab === 'PAGES'" x-transition>
           <ul class="pt-[20px]">
             {% assign page_names = "todos,wants" | split: "," %}
             {% for page_name in page_names %}
@@ -120,8 +120,8 @@
             </li>
           </ul>
         </div>
-        <div x-show="activeTab === 'LINKS'">LINKS</div>
-        <div x-show="activeTab === 'TECHS'">TECHS</div>
+        <div x-show="activeTab === 'LINKS'" x-transition>LINKS</div>
+        <div x-show="activeTab === 'TECHS'" x-transition>TECHS</div>
       </aside>
       <main class="flex-1">
       {% include header.html %}
