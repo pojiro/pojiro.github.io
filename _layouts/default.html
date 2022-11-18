@@ -57,7 +57,7 @@
         >
         <div x-show="activeTab === 'PAGES'" x-transition>
           <ul class="pt-[20px]">
-            {% assign page_names = "todos,wants" | split: "," %}
+            {% assign page_names = "todos,links" | split: "," %}
             {% for page_name in page_names %}
             <li class="py-[3px]">
               <a href="/{{ page_name }}"
