@@ -10,9 +10,9 @@
     {% include ogp.html %}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body>
-    <div class="flex flex-row">
-      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light overflow-hidden" x-data="{ tabNames: ['PAGES', 'LINKS', 'TECHS'], activeTab: 'PAGES' }">
+  <body class="min-h-screen relative overflow-hidden">
+    <div class="flex flex-row absolute inset-0">
+      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light" x-data="{ tabNames: ['PAGES', 'LINKS', 'TECHS'], activeTab: 'PAGES' }">
         <div class="mt-[12px]">
           <form class="relative">
             <button class="absolute inset-y-0 left-[22px] text-slate-500">
@@ -49,7 +49,7 @@
             </template>
           </nav>
         </div>
-        <div x-show="activeTab === 'PAGES'" x-transition>
+        <div class="overflow-y-auto" x-show="activeTab === 'PAGES'" x-transition>
           <ul class="pt-[20px]">
             {% assign page_names = "todos,wants" | split: "," %}
             {% for page_name in page_names %}
@@ -123,7 +123,7 @@
         <div x-show="activeTab === 'LINKS'" x-transition>LINKS</div>
         <div x-show="activeTab === 'TECHS'" x-transition>TECHS</div>
       </aside>
-      <main class="flex-1">
+      <main class="flex-1 overflow-y-auto">
       {% include header.html %}
       {{ content }}
       {% include footer.html %}
