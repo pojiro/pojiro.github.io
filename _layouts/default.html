@@ -41,9 +41,9 @@
           </div>
           <nav aria-label="Tabs" class="flex flex-nowrap pt-3">
             <template x-for="tabName in tabNames">
-            <button class="px-2.5 text-sm text-slate-400 hover:border-b-[3px] hover:border-violet-400 hover:text-slate-50"
+            <button class="px-2.5 text-sm hover:border-b-[3px] hover:border-violet-400 hover:text-slate-50"
                     x-on:click="activeTab = tabName"
-                    x-bind:class="activeTab === tabName ? 'border-b-[3px] border-violet-400 text-slate-50' : 'border-b-[3px] border-transparent'"
+                    x-bind:class="activeTab === tabName ? 'border-b-[3px] border-violet-400 text-slate-50' : 'border-b-[3px] border-transparent text-slate-400'"
                     x-text="tabName">
             </button>
             </template>
