@@ -49,7 +49,12 @@
             </template>
           </nav>
         </div>
-        <div class="overflow-y-auto" x-show="activeTab === 'PAGES'" x-transition>
+        <div class="overflow-y-auto
+                    scrollbar:w-[14px]
+                    scrollbar-thumb:bg-slate-500 scrollbar-thumb:rounded-[10px] scrollbar-thumb:border-slate-900 scrollbar-thumb:border-solid scrollbar-thumb:border-[3px]
+                    scrollbar-track:bg-slate-900"
+        >
+        <div x-show="activeTab === 'PAGES'" x-transition>
           <ul class="pt-[20px]">
             {% assign page_names = "todos,wants" | split: "," %}
             {% for page_name in page_names %}
@@ -122,6 +127,7 @@
         </div>
         <div x-show="activeTab === 'LINKS'" x-transition>LINKS</div>
         <div x-show="activeTab === 'TECHS'" x-transition>TECHS</div>
+        </div>
       </aside>
       <main class="flex-1 overflow-y-auto">
       {% include header.html %}
