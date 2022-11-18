@@ -12,7 +12,7 @@
   </head>
   <body class="min-h-screen relative overflow-hidden">
     <div class="flex flex-row absolute inset-0">
-      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light" x-data="{ tabNames: ['PAGES', 'LINKS', 'TECHS'], activeTab: 'PAGES' }">
+      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light" x-data="{ tabNames: ['PAGES', 'MODULES'], activeTab: 'PAGES' }">
         <div class="mt-[12px]">
           <form class="relative">
             <button class="absolute inset-y-0 left-[22px] text-slate-500">
@@ -126,8 +126,7 @@
             </li>
           </ul>
         </div>
-        <div x-show="activeTab === 'LINKS'" x-transition>LINKS</div>
-        <div x-show="activeTab === 'TECHS'" x-transition>TECHS</div>
+        <div x-show="activeTab === 'MODULES'" x-transition>COMING SOON..</div>
         </div>
       </aside>
       <main class="flex-1 overflow-y-auto">
