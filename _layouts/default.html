@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="h-full">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -10,7 +10,7 @@
     {% include ogp.html %}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
-  <body class="min-h-screen relative overflow-hidden">
+  <body class="h-full relative overflow-hidden">
     <div class="flex flex-row absolute inset-0"
          x-data="{openSidebar: true}"
          x-init="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width < 768) { openSidebar = false }"
