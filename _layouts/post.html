@@ -1,7 +1,23 @@
 ---
 layout: default
 ---
-<div class="mx-auto prose prose-neutral prose-headings:underline prose-a:text-blue-600">
-  <h2>{{ page.title }}</h2>
-  {{ content }}
+<div class="mx-12 my-9">
+<div class="max-w-3xl mx-auto tracking-tight">
+  <article class="max-w-none prose prose-slate prose-headings:font-semibold prose-a:text-blue-600 prose-code:select-all">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <div class="flex justify-between">
+      <div>
+      {% if page.previous %}
+      <a href="{{ page.previous.url }}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      </div>
+      <div>
+      {% if page.next %}
+      <a href="{{ page.next.url }}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+      </div>
+    </div>
+  </article>
+</div>
 </div>
