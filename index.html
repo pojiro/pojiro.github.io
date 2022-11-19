@@ -1,43 +1,14 @@
 ---
-layout: default
+layout: none
 title: Home
 ---
-<div>
-  <ul role="list" class="divide-y divide-gray-200">
-    {% for post in paginator.posts %}
-    <li class="relative bg-white py-5 px-4 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 hover:bg-gray-50">
-      <div class="flex justify-between space-x-3">
-        <div class="min-w-0 flex-1">
-          <a href="{{ post.url }}" class="block focus:outline-none">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-            <p class="truncate text-sm font-medium text-gray-900">{{ post.title }}</p>
-            <p class="truncate text-sm text-gray-500">category: {{ post.category }}</p>
-          </a>
-        </div>
-        <time datetime="2021-01-27T16:35" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">{{ post.date }}</time>
-      </div>
-      <div class="mt-1">
-        <p class="text-sm text-gray-600 line-clamp-2">
-          tags:
-          {% for tag in post.tags %}
-          <strong class="rounded-full border border-current px-2 text-[10px] text-gray-500">{{ tag }}</strong>
-          {% endfor %}
-        </p>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-  <div>
-    {% if paginator.previous_page %}
-      {% if paginator.page == 2%}
-    <a href="/">New</a>
-      {% else %}
-    <a href="/page/{{ paginator.previous_page }}/">New</a>
-      {% endif %}
-    {% endif %}
-    <span>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-    <a href="/page/{{ paginator.next_page }}/">Old</a>
-    {% endif %}
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% assign latest_post = site.posts | first %}
+    <meta http-equiv="refresh" content="0; url={{ latest_post.url }}">
+  </head>
+  <body></body>
+</html>
