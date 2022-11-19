@@ -11,18 +11,24 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="min-h-screen relative overflow-hidden">
-    <div class="flex flex-row absolute inset-0">
-      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light" x-data="{ tabNames: ['PAGES', 'MODULES'], activeTab: 'PAGES' }">
+    <div class="flex flex-row absolute inset-0" x-data="{openSidebar: true}">
+      <button class="absolute z-10 text-white"
+              x-on:click="openSidebar = ! openSidebar"
+              x-bind:class="openSidebar ? 'text-white top-[20px] left-[250px]' : 'text-black top-[10px] left-[10px]'"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+      <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light"
+             x-show="openSidebar"
+             x-data="{ tabNames: ['PAGES', 'MODULES'], activeTab: 'PAGES' }"
+      >
         <div class="mt-[12px]">
           <form class="relative">
             <button class="absolute inset-y-0 left-[22px] text-slate-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.0" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-              </svg>
-            </button>
-            <button class="absolute inset-y-0 right-[22px] text-white">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </button>
             <label>
