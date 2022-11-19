@@ -11,8 +11,12 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="min-h-screen relative overflow-hidden">
-    <div class="flex flex-row absolute inset-0" x-data="{openSidebar: true}">
-      <button class="absolute z-10 text-white"
+    <div class="flex flex-row absolute inset-0"
+         x-data="{openSidebar: true}"
+         x-init="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width < 768) { openSidebar = false }"
+         x-on:resize.window="width = (window.innerWidth > 0) ? window.innerWidth : screen.width; if (width < 768) { openSidebar = false }"
+    >
+      <button class="absolute z-10"
               x-on:click="openSidebar = ! openSidebar"
               x-bind:class="openSidebar ? 'text-white top-[20px] left-[250px]' : 'text-black top-[10px] left-[10px]'"
       >
