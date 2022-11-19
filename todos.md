@@ -16,7 +16,6 @@ permalink: /todos
 - Post へのリンクの貼り方を調べる
 - Google analytics
 - タグがついた記事だけを引けるようにする（できる？
-- デザインの整理・統合
 
 ### Elixir
 
@@ -42,8 +41,6 @@ permalink: /todos
 
 - `ex_doc` as CMS の開発
   - 日本語検索機能
-  - live reload
-  - module sorting
 - `scad-ex` の開発
 - [usbip-win](https://github.com/cezanne/usbip-win) の別実装
   - [usbipd-win](https://github.com/dorssel/usbipd-win)
