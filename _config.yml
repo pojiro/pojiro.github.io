@@ -8,6 +8,13 @@ url: "https://pojiro.github.io"
 icon: "/favicon.ico"
 
 # Global Configuration
+collections_dir: collections
+collections:
+  pages:
+    output: true
+    order:
+      - todos.md
+      - links.md
 safe: false
 disable_disk_cache: false
 ignore_theme_config: true
@@ -32,8 +39,6 @@ exclude:
   - package-lock.json
   - tailwind.config.js
   - assets/css/input.css
-include:
-  - _pages/
 
 # Front Matter Global, https://jekyllrb.com/docs/permalinks/#global
 permalink: /:year/:month/:day/:title:output_ext

@@ -1,10 +1,9 @@
 <ul>
-  {% assign page_names = "todos,links" | split: "," %}
-  {% for page_name in page_names %}
+  {% for site_page in site.pages %}
   <li class="py-[3px]">
-    <a href="/{{ page_name }}"
-       x-bind:class="'/{{ page_name }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
-    >{{ page_name | capitalize }}</a>
+    <a href="{{ site_page.url }}"
+       x-bind:class="'{{ site_page.url }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
+    >{{ site_page.title | capitalize }}</a>
   </li>
   {% endfor %}
   <li class="pl-[15px] mt-[25px] font-bold text-slate-400">Posts</li>
