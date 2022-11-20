@@ -32,6 +32,8 @@ exclude:
   - package-lock.json
   - tailwind.config.js
   - assets/css/input.css
+include:
+  - _pages/
 
 # Front Matter Global, https://jekyllrb.com/docs/permalinks/#global
 permalink: /:year/:month/:day/:title:output_ext
