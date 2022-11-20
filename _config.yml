@@ -8,6 +8,7 @@ url: "https://pojiro.github.io"
 icon: "/favicon.ico"
 
 # Global Configuration
+collections_dir: collections
 safe: false
 disable_disk_cache: false
 ignore_theme_config: true
