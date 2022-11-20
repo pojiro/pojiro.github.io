@@ -67,77 +67,7 @@
                     scrollbar-track:bg-gray-900"
              x-show="activeTab !== null"
         >
-        <div x-show="activeTab === 'PAGES'" x-transition>
-          <ul>
-            {% assign page_names = "todos,links" | split: "," %}
-            {% for page_name in page_names %}
-            <li class="py-[3px]">
-              <a href="/{{ page_name }}"
-                 x-bind:class="'/{{ page_name }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
-              >{{ page_name | capitalize }}</a>
-            </li>
-            {% endfor %}
-            <li class="pl-[15px] mt-[25px] font-bold text-slate-400">Posts</li>
-            <li>
-              <ul x-data="{ selectedYear: '{{ page.date | date: '%Y' }}' }">
-                {% assign year_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-                {% for year_group in year_groups %}
-                <li class="mr-[30px] relative" x-data="{ openYear: selectedYear === '{{ year_group.name }}' }">
-                  <span class="cursor-pointer py-[3px]"
-                        x-on:click="openYear = true"
-                        x-bind:class="selectedYear === '{{ year_group.name }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
-                  >{{ year_group.name }} ({{ year_group.items.size }})</span>
-                  <button class="absolute right-[2px]"
-                          x-bind:class="selectedYear === '{{ year_group.name }}' ? 'text-violet-400' : 'text-white'"
-                          x-on:click="openYear = ! openYear"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0" stroke="currentColor" class="w-4 h-4" x-show="! openYear">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0" stroke="currentColor" class="w-4 h-4" x-show="openYear">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-                    </svg>
-                  </button>
-                  <ul class="ml-[10px] my-[9px]"
-                      x-show="openYear" x-transition
-                      x-data="{ selectedMonth: '{{ page.date | date: '%Y-%m' }}' }"
-                  >
-                    {% assign month_groups = year_group.items | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
-                    {% for month_group in month_groups %}
-                    <li class="px-[8px] py-[2px]" x-data="{ openMonth: selectedMonth === '{{ month_group.name }}' }">
-                      <span class="cursor-pointer pl-[15px] py-[3px]"
-                            x-on:click="openMonth = true"
-                            x-bind:class="selectedMonth === '{{ month_group.name }}' ? 'text-violet-400' : ''"
-                      >{{ month_group.name }} ({{ month_group.items.size }})</span>
-                      <button class="absolute right-[0px]"
-                              x-bind:class="selectedMonth === '{{ month_group.name }}' ? 'text-violet-400' : 'text-white'"
-                              x-on:click="openMonth = ! openMonth"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" x-show="! openMonth">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" x-show="openMonth">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                        </svg>
-                      </button>
-                      <ul class="ml-[10px] my-[9px]" x-show="openMonth" x-transition>
-                        {% for post in month_group.items %}
-                        <li class="ml-[8px] px-[10px]"
-                            x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700'"
-                            x-init="if ('{{ page.url }}' === '{{post.url}}') { selectedYear = '{{ year_group.name }}'; selectedMonth = '{{ month_group.name }}' }"
-                        ><a href="{{ post.url }}" class="py-[3px]" >{{ post.title }}</a>
-                        </li>
-                        {% endfor %}
-                      </ul>
-                    </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-                {% endfor %}
-              </ul>
-            </li>
-          </ul>
-        </div>
+        <div x-show="activeTab === 'PAGES'" x-transition>{% include pages_sidebar.html %}</div>
         <div x-show="activeTab === 'MODULES'" x-transition>COMING SOON..</div>
         </div>
       </aside>
