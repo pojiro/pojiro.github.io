@@ -60,14 +60,15 @@
             </template>
           </nav>
         </div>
-        <div class="overflow-y-auto
+        <div class="pt-[20px]
+                    overflow-y-auto
                     scrollbar:w-[14px]
                     scrollbar-thumb:bg-gray-500 scrollbar-thumb:rounded-[10px] scrollbar-thumb:border-slate-900 scrollbar-thumb:border-solid scrollbar-thumb:border-[3px]
                     scrollbar-track:bg-gray-900"
              x-show="activeTab !== null"
         >
         <div x-show="activeTab === 'PAGES'" x-transition>
-          <ul class="pt-[20px]">
+          <ul>
             {% assign page_names = "todos,links" | split: "," %}
             {% for page_name in page_names %}
             <li class="py-[3px]">
