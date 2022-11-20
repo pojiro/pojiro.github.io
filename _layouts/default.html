@@ -68,7 +68,7 @@
              x-show="activeTab !== null"
         >
         <div x-show="activeTab === 'PAGES'" x-transition>{% include pages_sidebar.html %}</div>
-        <div x-show="activeTab === 'MODULES'" x-transition>COMING SOON..</div>
+        <div x-show="activeTab === 'MODULES'" x-transition>{% include modules_sidebar.html %}</div>
         </div>
       </aside>
       <main class="flex-1 overflow-y-auto">
