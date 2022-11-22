@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Vim"
+category:
+---
+
+### Links
+
+- [ヘルプの引き方](https://vim-jp.org/vimdoc-ja/usr_02.html#02.8)
+- plugins
+  - [vim-prettier](https://github.com/prettier/vim-prettier)

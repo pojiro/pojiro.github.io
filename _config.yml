@@ -17,6 +17,8 @@ collections:
       - links.md
   CSS:
     output: true
+  Linux:
+    output: true
   Elixir:
     output: true
   ROS_2:

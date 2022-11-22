@@ -27,17 +27,6 @@ see. https://github.com/actions/jekyll-build-pages/issues/46#issuecomment-121550
 - [Rancher Desktop](https://github.com/rancher-sandbox/rancher-desktop/)
 - [Docker Desktop for Linux](https://github.com/docker/desktop-linux)
 
-### tmux
-
-- [tmux チートシート](https://qiita.com/nmrmsys/items/03f97f5eabec18a3a18b)
-- [tmuxinator](https://github.com/tmuxinator/tmuxinator)
-
-### vim
-
-- [ヘルプの引き方](https://vim-jp.org/vimdoc-ja/usr_02.html#02.8)
-  - `:help 02.8`
-- [vim-prettier](https://github.com/prettier/vim-prettier)
-
 ### ASCII Art
 
 - [Text to ASCII Art Generator](http://patorjk.com/software/taag)
