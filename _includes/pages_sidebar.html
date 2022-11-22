@@ -2,7 +2,7 @@
   {% for site_page in site.pages %}
   <li class="py-[3px]">
     <a href="{{ site_page.url }}"
-       x-bind:class="'{{ site_page.url }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
+       x-bind:class="'{{ site_page.url }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px] text-slate-300'"
     >{{ site_page.title | capitalize }}</a>
   </li>
   {% endfor %}
@@ -14,7 +14,7 @@
       <li class="mr-[30px] relative" x-data="{ openYear: selectedYear === '{{ year_group.name }}' }">
         <span class="cursor-pointer py-[3px]"
               x-on:click="openYear = true"
-              x-bind:class="selectedYear === '{{ year_group.name }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px]'"
+              x-bind:class="selectedYear === '{{ year_group.name }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px] text-slate-300'"
         >{{ year_group.name }} ({{ year_group.items.size }})</span>
         <button class="absolute right-[2px]"
                 x-bind:class="selectedYear === '{{ year_group.name }}' ? 'text-violet-400' : 'text-white'"
@@ -36,7 +36,7 @@
           <li class="px-[8px] py-[2px]" x-data="{ openMonth: selectedMonth === '{{ month_group.name }}' }">
             <span class="cursor-pointer pl-[15px] py-[3px]"
                   x-on:click="openMonth = true"
-                  x-bind:class="selectedMonth === '{{ month_group.name }}' ? 'text-violet-400' : ''"
+                  x-bind:class="selectedMonth === '{{ month_group.name }}' ? 'text-violet-400' : 'text-slate-300'"
             >{{ month_group.name }} ({{ month_group.items.size }})</span>
             <button class="absolute right-[0px]"
                     x-bind:class="selectedMonth === '{{ month_group.name }}' ? 'text-violet-400' : 'text-white'"
@@ -52,7 +52,7 @@
             <ul class="ml-[10px] my-[9px]" x-show="openMonth" x-transition>
               {% for post in month_group.items %}
               <li class="ml-[8px] px-[10px]"
-                  x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700'"
+                  x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700 text-slate-300'"
                   x-init="if ('{{ page.url }}' === '{{post.url}}') { selectedYear = '{{ year_group.name }}'; selectedMonth = '{{ month_group.name }}' }"
               ><a href="{{ post.url }}" class="py-[3px]" >{{ post.title }}</a>
               </li>
