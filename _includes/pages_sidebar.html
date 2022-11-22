@@ -8,7 +8,7 @@
   {% endfor %}
   <li class="pl-[15px] mt-[25px] font-bold text-slate-400">Posts</li>
   <li>
-    <ul x-data="{ selectedYear: '{{ page.date | date: '%Y' }}' }">
+    <ul x-data="{ selectedYear: ('{{ page.collection }}' === 'posts') ? '{{ page.date | date: '%Y' }}' : null }">
       {% assign year_groups = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
       {% for year_group in year_groups %}
       <li class="mr-[30px] relative" x-data="{ openYear: selectedYear === '{{ year_group.name }}' }">
@@ -29,7 +29,7 @@
         </button>
         <ul class="ml-[10px] my-[9px]"
             x-show="openYear" x-transition
-            x-data="{ selectedMonth: '{{ page.date | date: '%Y-%m' }}' }"
+            x-data="{ selectedMonth: ('{{ page.collection }}' === 'posts') ? '{{ page.date | date: '%Y-%m' }}' : null }"
         >
           {% assign month_groups = year_group.items | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
           {% for month_group in month_groups %}
