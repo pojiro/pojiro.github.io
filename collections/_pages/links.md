@@ -10,13 +10,6 @@ permalink: /links
 - [低レイヤを知りたい人のための C コンパイラ作成入門](https://www.sigbus.info/compilerbook)
 - ["硬派"のホームページ](https://www.affordd.jp/koha_hp/)
 
-### tailwindcss
-
-- [tailwindcss](https://tailwindcss.com/)
-- [tailwind UI](https://tailwindui.com/)
-- [headless UI](https://headlessui.com/)
-- [HyperUI](https://www.hyperui.dev/)
-
 ### GitHub
 
 - [Github Fork Pull Request](http://kik.xii.jp/archives/179)

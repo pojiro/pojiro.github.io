@@ -15,6 +15,8 @@ collections:
     order:
       - todos.md
       - links.md
+  CSS:
+    output: true
   Elixir:
     output: true
   ROS_2:
