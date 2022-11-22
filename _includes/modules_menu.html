@@ -1,0 +1,61 @@
+{% assign module_name = include.collection[0].collection %}
+{% assign module = include.collection %}
+<li class="relative mr-[30px]" x-data="{ openModule: selectedModule === '{{ module_name }}' }">
+  <span class="cursor-pointer py-[3px]"
+        x-on:click="openModule = true"
+        x-bind:class="selectedModule === '{{ module_name }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px] text-slate-300'"
+  >{{ module_name }} ({{ module.size }})</span>
+  <button class="absolute right-[2px]"
+          x-bind:class="selectedModule === '{{ module_name }}' ? 'text-violet-400' : 'text-white'"
+          x-on:click="openModule = ! openModule"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0" stroke="currentColor" class="h-4 w-4" x-show="! openModule">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0" stroke="currentColor" class="h-4 w-4" x-show="openModule">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    </svg>
+  </button>
+  <ul class="my-[9px] ml-[10px]" x-show="openModule" x-transition>
+  {% assign categories = module | group_by: 'category' %}
+  {% for category in categories %}
+    {% if category.name == '' %}
+    <li class="px-[8px] py-[2px]">
+      {% for post in category.items %}
+      <p class="cursor-pointer pl-[15px]"
+        x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'text-violet-400' : 'text-slate-300'"
+        x-init="if ('{{ page.url }}' === '{{ post.url }}') { selectedModule = '{{ module_name }}'; }"
+      > <a href="{{ post.url }}" class="py-[3px]">{{ post.title }}</a> </p>
+      {% endfor %}
+    </li>
+    {% else %}
+    <li class="px-[8px] py-[2px]"
+        x-data="{ openCategory: selectedModuleCategory === '{{ category.name }}' }" >
+      <span class="cursor-pointer py-[3px] pl-[15px]"
+            x-on:click="openCategory = true"
+            x-bind:class="selectedModuleCategory === '{{ category.name }}' ? 'text-violet-400' : 'text-slate-300'"
+      >{{ category.name }} ({{ category.items.size }})</span>
+      <button class="absolute right-[0px]"
+              x-bind:class="selectedModuleCategory === '{{ category.name }}' ? 'text-violet-400' : 'text-white'"
+              x-on:click="openCategory = ! openCategory"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5" x-show="! openCategory">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5" x-show="openCategory">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+        </svg>
+      </button>
+      <ul class="my-[9px] ml-[10px]" x-show="openCategory" x-transition>
+        {% for post in category.items %}
+        <li class="ml-[8px] px-[10px]"
+            x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700 text-slate-300'"
+            x-init="if ('{{ page.url }}' === '{{ post.url }}') { selectedModule = '{{ module_name }}'; selectedModuleCategory = '{{ post.category }}' }"
+        ><a href="{{ post.url }}" class="py-[3px]">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</li>

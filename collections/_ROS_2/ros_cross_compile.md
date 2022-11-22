@@ -1,16 +1,15 @@
 ---
 layout: post
-title: "ROS2 Cross Compile"
-category: note
-tags: ROS2
+title: "ros_cross_compile"
+category:
 ---
 
 ### 前提条件
 
 ```
-$ pip3 install --user vcstool
-$ pip3 install --user ros_cross_compile
-$ pip3 install --user colcon-ros-bundle
+pip3 install --user vcstool
+pip3 install --user ros_cross_compile
+pip3 install --user colcon-ros-bundle
 ```
 
 ### クロスコンパイル手順
@@ -20,10 +19,10 @@ see. https://github.com/ros-tooling/cross_compile
 arch は aarch64, armhf, x86_64 から選択できる
 
 ```
-$ git clone https://github.com/ros2/ros2
-$ mkdir -p ros_xc/ws/src
-$ vcs import ros_xc/ws/src < ros2/ros2.repos
-$ ros_cross_compile ros_xc/ws --arch armhf --os ubuntu --rosdistro foxy --colcon-defaults ros_xc/defaults.yaml
+git clone https://github.com/ros2/ros2
+mkdir -p ros_xc/ws/src
+vcs import ros_xc/ws/src < ros2/ros2.repos
+ros_cross_compile ros_xc/ws --arch armhf --os ubuntu --rosdistro foxy --colcon-defaults ros_xc/defaults.yaml
 ```
 
 要は、 build する src を用意して、ros_cross_compile でそれらを build するだけ。
@@ -42,7 +41,7 @@ https://github.com/ros-tooling/cross_compile#custom-post-build-script
 以下コマンドで試したが、
 
 ```
-$ ros_cross_compile ros_xc/ws --arch armhf --os ubuntu --rosdistro foxy --colcon-defaults ros_xc/defaults.yaml --custom-post-build-script ros_xc/post_build.sh
+ros_cross_compile ros_xc/ws --arch armhf --os ubuntu --rosdistro foxy --colcon-defaults ros_xc/defaults.yaml --custom-post-build-script ros_xc/post_build.sh
 ```
 
 以下のエラーが出て動作しなかった。未解決。
