@@ -28,6 +28,7 @@
       <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light"
              x-show="openSidebar"
              x-data="{ tabNames: ['PAGES', 'MODULES'], activeTab: 'PAGES' }"
+             x-init="activeTab = (['pages', 'posts'].includes('{{ page.collection }}')) ? 'PAGES' : 'MODULES'"
       >
         <div class="mt-[12px]">
           <form class="relative">
