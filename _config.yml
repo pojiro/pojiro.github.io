@@ -23,6 +23,8 @@ collections:
     output: true
   ROS_2:
     output: true
+  Unclassified:
+    output: true
 safe: false
 disable_disk_cache: false
 ignore_theme_config: true
