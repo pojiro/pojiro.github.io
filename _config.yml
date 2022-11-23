@@ -17,9 +17,15 @@ collections:
       - links.md
   CSS:
     output: true
+  RDB:
+    output: true
   Linux:
     output: true
   Elixir:
+    output: true
+  Memos:
+    output: true
+  Protocols:
     output: true
   ROS_2:
     output: true
