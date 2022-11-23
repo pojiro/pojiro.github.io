@@ -29,6 +29,8 @@ collections:
     output: true
   ROS_2:
     output: true
+  Rust:
+    output: true
   Unclassified:
     output: true
 safe: false
