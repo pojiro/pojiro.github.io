@@ -4,11 +4,11 @@ title: "Todos"
 permalink: /todos
 ---
 
+- デザインと運用の技術習得
 - [OSS ライセンスを正しく理解するための本](https://www.c-r.com/book/detail/1425)
 - [DNS がよくわかる教科書](https://www.sbcr.jp/product/4797394481/)
 - [Playwright](https://github.com/microsoft/playwright) を使えるようにする
 - [プログラミングの基礎](https://www.saiensu.co.jp/search/?isbn=978-4-7819-1160-1&y=2007)
-  - [Ocaml](https://github.com/ocaml/ocaml)
 
 ### Github Pages
 
