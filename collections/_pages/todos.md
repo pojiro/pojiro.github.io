@@ -13,7 +13,6 @@ permalink: /todos
 ### Github Pages
 
 - 検索できるようにする
-- Post へのリンクの貼り方を調べる
 - Google analytics
 - タグがついた記事だけを引けるようにする（できる？
 
