@@ -17,6 +17,8 @@ collections:
       - links.md
   CSS:
     output: true
+  JavaScript:
+    output: true
   RDB:
     output: true
   Linux:
