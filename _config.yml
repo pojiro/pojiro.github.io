@@ -19,15 +19,15 @@ collections:
     output: true
   JavaScript:
     output: true
-  RDB:
+  Elixir:
     output: true
   Linux:
-    output: true
-  Elixir:
     output: true
   Memos:
     output: true
   Protocols:
+    output: true
+  RDB:
     output: true
   ROS_2:
     output: true
