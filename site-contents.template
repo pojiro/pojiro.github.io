@@ -1,0 +1,4 @@
+---
+permalink: /assets/js/site-contents.js
+---
+const siteContents = [{% for collection in site.collections %}{% for post in collection.docs %}{"title":{{ post.title | jsonify }},"url":{{ post.url | jsonify }},"body":{{ post.content | strip_html | jsonify | replace:'\n', ' ' }}}{% unless forloop.last %},{% endunless %}{% endfor %}{% unless forloop.last %},{% endunless %}{% endfor %}]

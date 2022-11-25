@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/assets/css/output.css"/>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     {% include ogp.html %}
+    <script defer src="/assets/js/site-contents.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body class="h-full relative overflow-hidden">
@@ -30,7 +32,21 @@
              x-data="{ tabNames: ['PAGES', 'MODULES'], activeTab: 'PAGES' }"
              x-init="activeTab = (['pages', 'posts'].includes('{{ page.collection }}')) ? 'PAGES' : 'MODULES'"
       >
-        <div class="mt-[12px]">
+        <div class="mt-[12px]"
+             x-data="{
+               fuse: null,
+               inputs: '',
+               contents: siteContents,
+               get searchedResults () { return this.fuse.search(this.inputs, {limit: 5}) },
+               matchedText(result) {
+                 text = result.matches[0].value
+                 indexStart = result.matches[0].indices[0][0]
+                 indexEnd = result.matches[0].indices[0][1]
+                 return text.slice(indexStart, indexEnd + 1)
+               }
+             }"
+             x-init="fuse = new Fuse(contents, { keys: ['title', 'body'], includeMatches: true, minMatchCharLength: 2, findAllMatches: true, ignoreLocation: true, fieldNormWeight: 0.5 })"
+        >
           <form class="relative">
             <button class="absolute inset-y-0 left-[22px] text-slate-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.0" stroke="currentColor" class="w-4 h-4">
@@ -39,9 +55,19 @@
             </button>
             <label>
               <p class="sr-only">Search</p>
-              <input type="text" placeholder="Not implemented..." aria-label="Input your search terms" autocomplete="off" class="ml-[12px] pl-[38px] py-[8px] pr-[6px] w-[276px] form-input bg-slate-800"/>
+              <input type="search" placeholder="Now implementing..." aria-label="Input your search terms" autocomplete="off" class="ml-[12px] pl-[38px] py-[8px] pr-[6px] w-[276px] form-input bg-slate-800" x-model="inputs"/>
             </label>
           </form>
+          <ul class="ml-[12px] w-[276px]">
+            <template x-for="result in searchedResults">
+            <li class="bg-slate-800 hover:bg-slate-700 p-[10px]">
+              <a x-bind:href="result.item.url">
+                <div x-text="result.item.title"></div>
+                <div class="text-sm" x-text="matchedText(result)"></div>
+              </a>
+            <li>
+            </template>
+          </ul>
         </div>
         <div class="m-[12px] bg-slate-800">
           <div>
