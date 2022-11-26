@@ -47,6 +47,7 @@
              }"
              x-init="fuse = new Fuse(contents, { keys: ['title', 'body'], includeMatches: true, minMatchCharLength: 2, findAllMatches: true, ignoreLocation: true, fieldNormWeight: 0.5 })"
         >
+          <div class="relative" x-data="{ open: false }">
           <form class="relative">
             <button class="absolute inset-y-0 left-[22px] text-slate-500">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.0" stroke="currentColor" class="w-4 h-4">
@@ -55,12 +56,19 @@
             </button>
             <label>
               <p class="sr-only">Search</p>
-              <input type="search" placeholder="Now implementing..." aria-label="Input your search terms" autocomplete="off" class="ml-[12px] pl-[38px] py-[8px] pr-[6px] w-[276px] form-input bg-slate-800" x-model="inputs"/>
+              <input type="text" placeholder="Now implementing..." aria-label="Input your search terms" autocomplete="off" class="ml-[12px] pl-[38px] py-[8px] pr-[6px] w-[276px] form-input outline-0 bg-slate-800"
+                     x-model="inputs"
+                     x-on:click="open = true"
+                     x-on:click.outside="open = false"
+              />
             </label>
           </form>
-          <ul class="ml-[12px] w-[276px]">
+          <ul class="ml-[12px] w-[276px] absolute z-10" x-show="open">
             <template x-for="result in searchedResults">
-            <li class="bg-slate-800 hover:bg-slate-700 p-[10px]">
+            <li class="bg-slate-800
+                       first-of-type:bg-slate-700 p-[10px] first-of-type:border-l-[3px] first-of-type:border-violet-400 first-of-type:text-slate-50
+                       hover:bg-slate-700 p-[10px] hover:border-l-[3px] hover:border-violet-400 hover:text-slate-50"
+            >
               <a x-bind:href="result.item.url">
                 <div x-text="result.item.title"></div>
                 <div class="text-sm" x-text="matchedText(result)"></div>
@@ -69,7 +77,8 @@
             </template>
           </ul>
         </div>
-        <div class="m-[12px] bg-slate-800">
+        </div>
+        <div class="relative m-[12px] bg-slate-800">
           <div>
             <img src="/assets/images/logo.png" alt="Tombo Notes Logo" class="inline-block align-bottom h-12 w-12 ml-2.5">
             <div class="inline-block mt-1.5 ml-2.5">
