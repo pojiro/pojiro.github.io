@@ -12,7 +12,6 @@ permalink: /todos
 
 ### Github Pages
 
-- 検索できるようにする
 - Google analytics
 - タグがついた記事だけを引けるようにする（できる？
 
@@ -38,7 +37,6 @@ permalink: /todos
 
 ### 挑戦的な開発
 
-- `ex_doc` クローンに日本語検索機能を付ける
 - `scad-ex` の開発
 - [usbip-win](https://github.com/cezanne/usbip-win) の別実装
   - [usbipd-win](https://github.com/dorssel/usbipd-win)
