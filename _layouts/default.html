@@ -45,7 +45,7 @@
                  return text.slice(indexStart, indexEnd + 1)
                }
              }"
-             x-init="fuse = new Fuse(contents, { keys: ['title', 'body'], includeMatches: true, minMatchCharLength: 2, findAllMatches: true, ignoreLocation: true, fieldNormWeight: 0.5 })"
+             x-init="fuse = new Fuse(contents, { keys: ['title', 'body'], includeMatches: true, minMatchCharLength: 3, ignoreLocation: true, fieldNormWeight: 0.5 })"
         >
           <div class="relative" x-data="{ open: false }">
           <form class="relative">
