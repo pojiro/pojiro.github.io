@@ -42,7 +42,7 @@
                  text = result.matches[0].value
                  indexStart = result.matches[0].indices[0][0]
                  indexEnd = result.matches[0].indices[0][1]
-                 return text.slice(indexStart, indexEnd + 1)
+                 return { before: text.slice(indexStart - 7, indexStart), value: text.slice(indexStart, indexEnd + 1), after: text.slice(indexEnd + 1, indexEnd + 1 + 7) }
                }
              }"
              x-init="fuse = new Fuse(contents, { keys: ['title', 'body'], includeMatches: true, minMatchCharLength: 3, ignoreLocation: true, fieldNormWeight: 0.5 })"
@@ -71,7 +71,11 @@
             >
               <a x-bind:href="result.item.url">
                 <div x-text="result.item.title"></div>
-                <div class="text-sm" x-text="matchedText(result)"></div>
+                <div class="text-sm" x-data="{ matched: {} }" x-effect="matched = matchedText(result)">
+                  <span x-text="matched.before"></span>
+                  <span x-text="matched.value" class="text-slate-50 font-semibold"></span>
+                  <span x-text="matched.after"></span>
+                </div>
               </a>
             <li>
             </template>
