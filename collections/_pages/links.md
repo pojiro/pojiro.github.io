@@ -13,4 +13,3 @@ permalink: /links
 - [PLAID Engineer Blog](https://tech.plaid.co.jp/)
 
 - [Java の入門が終わったら何の勉強をすればいいの？](https://speakerdeck.com/kishida/what-should-we-study-after-language)
-- [とほほのライセンス入門](https://www.tohoho-web.com/ex/license.html)
