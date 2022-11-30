@@ -1,6 +1,8 @@
 <ul x-data="{ selectedModule: '{{ page.collection }}', selectedModuleCategory: '{{ page.category }}' }">
   <li class="mt-[25px] pl-[15px] font-bold text-slate-400">DBs</li>
   <li><ul>{% include modules_menu.html collection=site.RDB %}</ul></li>
+  <li class="mt-[25px] pl-[15px] font-bold text-slate-400">Devices</li>
+  <li><ul>{% include modules_menu.html collection=site.SBC %}</ul></li>
   <li class="mt-[25px] pl-[15px] font-bold text-slate-400">Languages</li>
   <li><ul>{% include modules_menu.html collection=site.CSS %}</ul></li>
   <li><ul>{% include modules_menu.html collection=site.JavaScript %}</ul></li>

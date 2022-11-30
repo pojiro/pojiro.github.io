@@ -35,6 +35,8 @@ collections:
     output: true
   Rust:
     output: true
+  SBC:
+    output: true
   Unclassified:
     output: true
 safe: false
