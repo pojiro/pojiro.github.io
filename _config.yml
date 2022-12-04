@@ -8,37 +8,6 @@ url: "https://pojiro.github.io"
 icon: "/favicon.ico"
 
 # Global Configuration
-collections_dir: collections
-collections:
-  pages:
-    output: true
-    order:
-      - todos.md
-      - links.md
-  CSS:
-    output: true
-  JavaScript:
-    output: true
-  Elixir:
-    output: true
-  Linux:
-    output: true
-  Memos:
-    output: true
-  Protocols:
-    output: true
-  RDB:
-    output: true
-  ROS_2:
-    output: true
-  Ruby:
-    output: true
-  Rust:
-    output: true
-  SBC:
-    output: true
-  Unclassified:
-    output: true
 safe: false
 disable_disk_cache: false
 ignore_theme_config: true
