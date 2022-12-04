@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "テーブル設計"
-category:
+categories: ["RDB"]
+tags: []
 ---
 
 ### Links

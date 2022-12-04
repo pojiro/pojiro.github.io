@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "ASCII Art"
-category:
+categories: ["Unclassified"]
+tags: []
 ---
 
 ### Links

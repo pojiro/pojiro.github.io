@@ -1,4 +1,4 @@
-{% assign module_name = include.collection[0].collection %}
+{% assign module_name = include.collection[0].categories[0] %}
 {% assign module = include.collection %}
 <li class="relative mr-[30px]" x-data="{ openModule: selectedModule === '{{ module_name }}' }">
   <span class="cursor-pointer py-[3px]"
@@ -17,9 +17,9 @@
     </svg>
   </button>
   <ul class="my-[9px] ml-[10px]" x-show="openModule" x-transition>
-  {% assign categories = module | group_by: 'category' %}
+  {% assign categories = module | group_by_exp: "item", "item.categories[1]" %}
   {% for category in categories %}
-    {% if category.name == '' %}
+    {% if category.name == nil %}
     <li class="px-[8px] py-[2px]">
       {% for post in category.items %}
       <p class="cursor-pointer pl-[15px]"
@@ -50,7 +50,7 @@
         {% for post in category.items %}
         <li class="ml-[8px] px-[10px]"
             x-bind:class="'{{ page.url }}' === '{{ post.url }}' ? 'border-l-[1px] border-violet-500 text-violet-400' : 'border-l-[1px] border-slate-700 text-slate-300'"
-            x-init="if ('{{ page.url }}' === '{{ post.url }}') { selectedModule = '{{ module_name }}'; selectedModuleCategory = '{{ post.category }}' }"
+            x-init="if ('{{ page.url }}' === '{{ post.url }}') { selectedModule = '{{ module_name }}'; selectedModuleCategory = '{{ post.categories[1] }}' }"
         ><a href="{{ post.url }}" class="py-[3px]">{{ post.title }}</a></li>
         {% endfor %}
       </ul>

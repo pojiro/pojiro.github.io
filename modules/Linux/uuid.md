@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "UUID"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### 得る方法

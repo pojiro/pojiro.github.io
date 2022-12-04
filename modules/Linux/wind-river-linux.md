@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Wind River Linux"
-category: distribution
+categories: ["Linux", "distribution"]
+tags: []
 ---
 
 ### Links

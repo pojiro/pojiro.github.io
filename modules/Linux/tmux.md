@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "tmux"
-category: commands
+categories: ["Linux", "commands"]
+tags: []
 ---
 
 ### Links

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "sed"
-category: commands
+categories: ["Linux", "commands"]
+tags: []
 ---
 
 ### 変換先文字列に区切り文字（ex. スラッシュ）が含まれる場合

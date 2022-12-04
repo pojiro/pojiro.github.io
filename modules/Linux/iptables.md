@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "iptables"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

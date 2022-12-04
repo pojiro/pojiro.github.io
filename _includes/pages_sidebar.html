@@ -1,9 +1,9 @@
 <ul>
-  {% for site_page in site.pages %}
+  {% for site_page in site.data.top_pages %}
   <li class="py-[3px]">
     <a href="{{ site_page.url }}"
        x-bind:class="'{{ site_page.url }}' === '{{ page.url }}' ? 'pl-[12px] border-l-[3px] border-violet-400 text-violet-400' : 'pl-[15px] text-slate-300'"
-    >{{ site_page.title | capitalize }}</a>
+    >{{ site_page.title }}</a>
   </li>
   {% endfor %}
   <li class="pl-[15px] mt-[25px] font-bold text-slate-400">Posts</li>

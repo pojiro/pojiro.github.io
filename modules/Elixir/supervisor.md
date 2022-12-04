@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Supervisor"
-category: OTP
+categories: ["Elixir", "OTP"]
+tags: []
 ---
 
 ### Links

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Vim"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

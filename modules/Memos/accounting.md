@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "経理"
-category:
+categories: ["Memos"]
+tags: []
 ---
 
 - [住民税は、事業主個人にかかる税金のため、個人事業の必要経費（租税公課）にはできません。](https://www.freee.co.jp/kb/kb-blue-return/resident-tax/#content4)

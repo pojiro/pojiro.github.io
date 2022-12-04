@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "QEMU"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### [ARM 環境の Raspbian イメージを x86 上の Docker で動かす](https://qiita.com/hishi/items/61652e2d9755e17630de)

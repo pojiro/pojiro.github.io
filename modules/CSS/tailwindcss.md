@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "tailwindcss"
-category:
+categories: ["CSS"]
+tags: []
 ---
 
 ### Links

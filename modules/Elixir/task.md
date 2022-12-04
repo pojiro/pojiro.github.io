@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Task"
-category: OTP
+categories: ["Elixir", "OTP"]
+tags: []
 ---
 
 - https://hexdocs.pm/elixir/master/Task.html

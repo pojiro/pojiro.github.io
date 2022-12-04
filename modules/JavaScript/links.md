@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Links"
-category:
+categories: ["JavaScript"]
+tags: []
 ---
 
 ### 全文検索ライブラリ

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "jekyll"
-category:
+categories: ["Ruby"]
+tags: []
 ---
 
 - サイト内リンクの張り方

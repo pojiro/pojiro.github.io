@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "filesystems"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

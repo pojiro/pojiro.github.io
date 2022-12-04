@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "nftables"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

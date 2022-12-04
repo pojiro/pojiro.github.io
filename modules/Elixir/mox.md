@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Mox"
-category:
+categories: ["Elixir"]
+tags: []
 ---
 
 https://github.com/dashbitco/mox

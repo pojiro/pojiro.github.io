@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "ros_cross_compile"
-category:
+categories: ["ROS 2"]
+tags: []
 ---
 
 ### 前提条件

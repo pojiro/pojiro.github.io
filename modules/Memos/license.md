@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "License"
-category:
-tags:
+categories: ["Memos"]
+tags: []
 ---
 
 ### Links

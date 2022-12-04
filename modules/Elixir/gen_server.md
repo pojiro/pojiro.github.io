@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "GenServer"
-category: OTP
+categories: ["Elixir", "OTP"]
+tags: []
 ---
 
 ### Links

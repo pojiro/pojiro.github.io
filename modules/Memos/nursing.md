@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "介護"
-category:
+categories: ["Memos"]
+tags: []
 ---
 
 ### Links

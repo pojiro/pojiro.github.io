@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "USB Gadget"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

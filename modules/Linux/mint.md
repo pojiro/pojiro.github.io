@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Mint"
-category: distribution
+categories: ["Linux", "distribution"]
+tags: []
 ---
 
 ### ThinkPad X1 Carbon Gen 9 へのインストール

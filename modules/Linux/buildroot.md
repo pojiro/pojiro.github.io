@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Buildroot"
-category:
-tags:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

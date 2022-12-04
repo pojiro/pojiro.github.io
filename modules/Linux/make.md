@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "make"
-category: commands
+categories: ["Linux", "commands"]
+tags: []
 ---
 
 ### Links

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "device tree overlay"
-category:
+categories: ["Linux"]
+tags: []
 ---
 
 ### Links

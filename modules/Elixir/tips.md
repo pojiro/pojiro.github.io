@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Tips"
-category: other
+categories: ["Elixir", "other"]
+tags: []
 ---
 
 ### リストの結合

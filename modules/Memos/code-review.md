@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "コードレビュー"
-category:
+categories: ["Memos"]
+tags: []
 ---
 
 ### Links

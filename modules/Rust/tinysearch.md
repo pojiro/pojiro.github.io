@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "tinysearch"
-category:
+categories: ["Rust"]
+tags: []
 ---
 
 ### Links
