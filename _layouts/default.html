@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="/assets/css/output.css"/>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     {% include ogp.html %}
@@ -30,7 +30,7 @@
       <aside class="flex flex-col w-[300px] bg-slate-900 text-slate-300 font-light"
              x-show="openSidebar"
              x-data="{ tabNames: ['PAGES', 'MODULES'], activeTab: 'PAGES' }"
-             x-init="activeTab = (['pages', 'posts'].includes('{{ page.collection }}')) ? 'PAGES' : 'MODULES'"
+             x-init="activeTab = ('{{ page.dir }}' == '/' || '{{ page.collection }}' == 'posts') ? 'PAGES' : 'MODULES'"
       >
         <div class="mt-[12px]"
              x-data="{
