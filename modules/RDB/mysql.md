@@ -47,5 +47,5 @@ mysql> select host,user from mysql.user;
 database と user 作った後に dump を流し込む
 
 ```
-mysql -u root < backup.dump
+mysql -u root [database] < backup.dump
 ```
