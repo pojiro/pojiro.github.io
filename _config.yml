@@ -60,7 +60,7 @@ strict_front_matter: true
 ### paginate_path: "page/:num"
 ## jekyll-seo-tag
 author:
-  name: "pojiro"
+  twitter: "pojiro3"
   url: "https://github.com/pojiro"
 twitter:
   username: "pojiro3"
