@@ -36,6 +36,12 @@ exclude:
 # Front Matter Global, https://jekyllrb.com/docs/permalinks/#global
 permalink: /:year/:month/:day/:title:output_ext
 
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      image: /assets/images/logo.png
+
 # Markdown Options
 markdown: CommonMark
 commonmark:
@@ -66,3 +72,4 @@ twitter:
   username: "pojiro3"
   card: "summary"
 locale: "ja_JP"
+logo: /assets/images/logo.png
