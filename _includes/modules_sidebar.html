@@ -12,6 +12,8 @@
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'Elixir'" %}
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
+  {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'Erlang'" %}
+  <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'Ruby'" %}
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'Rust'" %}
