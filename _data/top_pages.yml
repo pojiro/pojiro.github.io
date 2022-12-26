@@ -1,4 +1,6 @@
-- title: "Todo"
-  url: "/todos"
 - title: "Links"
   url: "/links"
+- title: "Todos"
+  url: "/todos"
+- title: "Wants"
+  url: "/wants"
