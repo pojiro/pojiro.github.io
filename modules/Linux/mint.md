@@ -40,6 +40,10 @@ tags: []
 - 換装前のパーティション構成を GParted で調べておくことが重要。
   - MBR なのか GPT なのか、どのパーティションにルートファイルシステムと ESP を割り当てているかなど
 
+以下のキャプチャは例、ただし換装後
+
+![image](https://user-images.githubusercontent.com/4096956/210121015-ee9a2bae-79e7-494e-bb14-db71ed94bdd9.png)
+
 ### ThinkPad X1 Carbon Gen 9 へのインストール
 
 1. https://linuxmint.com/download.php から Linux Mint 20.1 Ulyssa の Cinnamon の iso をダウンロードし、USB を作成
