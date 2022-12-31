@@ -7,10 +7,10 @@ tags: []
 
 ### ThinkPad X1 Carbon Gen 9 へのインストール
 
-1. https://linuxmint.com/download.php から Linux Mint 20.1 Ulyssa の Cinnamon の iso をダウンロードし、USBを作成
-1. USBからBootしてインストール, Secure Boot は Enable とする
+1. https://linuxmint.com/download.php から Linux Mint 20.1 Ulyssa の Cinnamon の iso をダウンロードし、USB を作成
+1. USB から Boot してインストール, Secure Boot は Enable とする
 1. インストール完了後、再起動。
-1. Linux Boot前画面で表示されるメニューでContinue Bootを選ばず、Enroll MOKを行う。 ※インストール時に Secure Boot を Enable としたため。
+1. Linux Boot 前画面で表示されるメニューで Continue Boot を選ばず、Enroll MOK を行う。 ※インストール時に Secure Boot を Enable としたため。
 
 #### グラフィクスドライバ、マイク、画面輝度キー(F5/6)が機能しない問題への対処
 
