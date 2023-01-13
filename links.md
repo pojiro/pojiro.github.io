@@ -18,3 +18,4 @@ permalink: /links
 
 - [Nerves Metal Detector](https://nerves-metal-detector.fly.dev/)
 - [GREAT SCOTT GADGETS](https://greatscottgadgets.com/)
+- [docs.jj1bdx.tokyo](https://docs.jj1bdx.tokyo/)
