@@ -50,17 +50,4 @@ clean:
 .PHONY: run_test
 ```
 
-This sample is for following C project,
-
-```
-tree
-.
-├── Makefile
-├── include
-│   └── add.h
-├── src
-│   └── add.c
-└── test
-    ├── add_test.cc
-    └── main.cc
-```
+sample is here, https://github.com/pojiro/gtest_sample
