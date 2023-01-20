@@ -6,6 +6,8 @@
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'SBC'" %}
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   <li class="mt-[25px] pl-[15px] font-bold text-slate-400">Languages</li>
+  {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'C++'" %}
+  <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'CSS'" %}
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'JavaScript'" %}
