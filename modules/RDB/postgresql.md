@@ -38,3 +38,34 @@ local   all             postgres                                md5
 ```
 sudo systemctl reload postgresql.service
 ```
+
+### psql: error: FATAL: database "pojiro" does not exist
+
+`create user pojiro;` し、 `psql` でアクセスすると発生する。
+
+文字通り database "pojiro" が存在しないことが原因。
+これはどういうことかと言うとユーザは必ず何らかの database に接続してログインしているということ。
+
+例えば、`psql -U postgres` で database 指定なしでログインすると `postgres` という名前の database に接続している。
+
+```
+postgres=# \l
+                                         List of databases
+          Name           |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
+-------------------------+----------+----------+-------------+-------------+-----------------------
+ ...
+ postgres                | postgres | UTF8     | ja_JP.UTF-8 | ja_JP.UTF-8 |
+ ...
+postgres=# \dt
+Did not find any relations.
+postgres=# \c test;
+You are now connected to database "test" as user "postgres".
+test=#
+```
+
+`=#` の左側が接続している database ということだ。
+
+> 文字通り database "pojiro" が存在しないことが原因。
+
+なので、`create database pojiro` としてデフォルト接続先を用意してやればよい。
+user に `Create DB` の権限があれば、そこで create database して database を切り替えられる。
