@@ -5,6 +5,14 @@ categories: ["Elixir", "other"]
 tags: []
 ---
 
+### ドキュメントをさっと開く
+
+```
+mix hex.docs PACKAGE [VERSION]
+```
+
+see more details `mix help hex.docs`
+
 ### リストの結合
 
 ```
