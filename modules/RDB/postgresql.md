@@ -5,6 +5,22 @@ categories: ["RDB"]
 tags: []
 ---
 
+### トランザクション分離レベル
+
+```
+pojiro=> show transaction_isolation;
+ transaction_isolation
+-----------------------
+ read committed
+(1 row)
+```
+
+```
+SET TRANSACTION ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
+```
+
+see. https://www.postgresql.org/docs/12/sql-set-transaction.html
+
 ### Peer authentication failed
 
 Unix ユーザ pojiro で以下のコマンドを実行すると
