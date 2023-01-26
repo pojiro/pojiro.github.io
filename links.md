@@ -19,3 +19,4 @@ permalink: /links
 - [Nerves Metal Detector](https://nerves-metal-detector.fly.dev/)
 - [GREAT SCOTT GADGETS](https://greatscottgadgets.com/)
 - [docs.jj1bdx.tokyo](https://docs.jj1bdx.tokyo/)
+- [gcchaan研修資料まとめ.md](https://gist.github.com/gcchaan/02f4746a323acac4095c30e0783a3912)
