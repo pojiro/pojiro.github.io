@@ -19,4 +19,7 @@ permalink: /links
 - [Nerves Metal Detector](https://nerves-metal-detector.fly.dev/)
 - [GREAT SCOTT GADGETS](https://greatscottgadgets.com/)
 - [docs.jj1bdx.tokyo](https://docs.jj1bdx.tokyo/)
-- [gcchaan研修資料まとめ.md](https://gist.github.com/gcchaan/02f4746a323acac4095c30e0783a3912)
+- [gcchaan 研修資料まとめ.md](https://gist.github.com/gcchaan/02f4746a323acac4095c30e0783a3912)
+
+- [KLab Expert Camp](https://drive.google.com/drive/folders/1k2vymbC3vUk5CTJbay4LLEdZ9HemIpZe)
+  - 「TCP/IP プロトコルスタック」を自作するための資料へのリンク
