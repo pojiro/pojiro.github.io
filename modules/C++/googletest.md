@@ -8,6 +8,7 @@ tags: []
 ### Links
 
 - [google/googletest](https://github.com/google/googletest)
+- [GoogleTest User’s Guide](https://google.github.io/googletest/)
 
 ### build
 
