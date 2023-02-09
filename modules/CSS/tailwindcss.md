@@ -12,6 +12,10 @@ tags: []
 - [headless UI](https://headlessui.com/)
 - [HyperUI](https://www.hyperui.dev/)
 
+### 自動生成される HTML をいい感じにする
+
+Official Plugin の [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) を使う。
+
 ### scrollbar のデザインを変更する
 
 [Adding variants](https://tailwindcss.com/docs/plugins#adding-variants) で custom modifiers を登録して、それを使うようにする。
