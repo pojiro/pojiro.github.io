@@ -16,8 +16,9 @@ tags: []
 - [vim-prettier](https://github.com/prettier/vim-prettier)
 - [minpac](https://github.com/k-takata/minpac)
 
-### どのキーが map されているか調べる
+### キー mapping を確認する
 
 ```
+:verbose imap
 :verbose imap <S-Tab>
 ```
