@@ -4,7 +4,7 @@ email: nil
 description: >- # this means to ignore newlines until "baseurl:"
   調べ、試したことのノート
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://pojiro.github.io"
+url: "https://notes3.tombo-works.com"
 icon: "/favicon.ico"
 
 # Global Configuration
