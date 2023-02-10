@@ -11,6 +11,7 @@ tags: []
 - [ヘルプの引き方](https://vim-jp.org/vimdoc-ja/usr_02.html#02.8)
 - plugins
   - [vim-prettier](https://github.com/prettier/vim-prettier)
+- [実践 Vim 思考のスピードで編集しよう! ](https://www.amazon.co.jp/dp/4048916599)
 
 ### どのキーが map されているか調べる
 
