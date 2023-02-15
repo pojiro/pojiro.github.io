@@ -12,3 +12,4 @@ tags: []
 - [Erlang in Anger](http://www.erlang-in-anger.com/)
   - 日本語訳プロジェクト: https://github.com/ymotongpoo/erlang-in-anger
     - artifact: https://ymotongpoo.github.io/erlang-in-anger/text-ja.pdf
+- [The Zen of Erlang](https://ferd.ca/the-zen-of-erlang.html)
