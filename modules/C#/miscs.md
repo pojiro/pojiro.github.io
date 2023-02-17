@@ -29,3 +29,11 @@ tags: []
 
 - https://learn.microsoft.com/ja-jp/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)
 - [Rx Workshop](https://learn.microsoft.com/en-us/shows/rx-workshop/)
+
+### LINQ
+
+- [Head- and Tail-like methods in C#](https://www.tabsoverspaces.com/233633-head-and-tail-like-methods-on-list-in-csharp-and-fsharp-and-python-and-haskell)
+
+### SerialPort
+
+- [public void Write (string text)](<https://learn.microsoft.com/en-us/dotnet/api/system.io.ports.serialport.write?view=dotnet-plat-ext-7.0#system-io-ports-serialport-write(system-string)>) は、デフォルトでは string （UTF16 の羅列）を ASCII エンコードして 0x7F までの byte 配列している。 see. リンク先の Remarks を読むこと
