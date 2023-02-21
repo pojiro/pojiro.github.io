@@ -12,6 +12,10 @@ tags: []
 - [headless UI](https://headlessui.com/)
 - [HyperUI](https://www.hyperui.dev/)
 
+### 任意値を使う
+
+[Using arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values)
+
 ### 自動生成される HTML をいい感じにする
 
 Official Plugin の [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) を使う。
