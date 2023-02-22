@@ -12,6 +12,18 @@ tags: []
 - [headless UI](https://headlessui.com/)
 - [HyperUI](https://www.hyperui.dev/)
 
+### background-image と gradient
+
+```
+bg-[linear-gradient(to_right,_white,_transparent),url('file-path')]
+```
+
+のようにも書けるが、 url() で相対パスを使う場合 CSS ファイル対する相対となる。
+
+他の方法として mix-brend-xxx を使う方法がある。
+
+[Tailwind Tutorial | How to Handle Background Images, Gradients, and Overlays in Tailwind CSS](https://www.youtube.com/watch?v=5UPdRF5xpVM)
+
 ### 任意値を使う
 
 [Using arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values)
