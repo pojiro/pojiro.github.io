@@ -31,3 +31,9 @@ end
 ```
 
 refs. プログラミング Elixir p. 244
+
+### :sys.trace で message デバッグ
+
+GenServer 内の message 処理が追える
+
+https://medium.com/blackode/unlock-the-power-of-otp-tracing-in-elixir-level-up-your-debugging-game-92bcc144e460
