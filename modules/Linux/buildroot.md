@@ -9,6 +9,8 @@ tags: []
 
 - [Buildroot system development training](https://bootlin.com/doc/training/buildroot/buildroot-slides.pdf)
   - Bootlin のトレーニング資料
+- [組込み Linux 向けユーザランド構築ツール Buildroot 概要と使い方](https://www.nds-osk.co.jp/atc/wp-content/uploads/Buildroot.pdf)
+  - 三菱電機の人が書いた 2017 年の資料
 
 ### Tips
 
