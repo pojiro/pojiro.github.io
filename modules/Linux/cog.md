@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cog"
-categories: ["Linux", "Wayland"]
+categories: ["Linux"]
 tags: []
 ---
 
@@ -27,3 +27,9 @@ WAYLAND_DEBUG=1 \
 WAYLAND_DISPLAY=wayland-1 cog \
   --webprocess-failure=exit
 ```
+
+### DRM をバックエンドにする場合
+
+調査中
+
+- https://github.com/Igalia/meta-webkit/issues/275
