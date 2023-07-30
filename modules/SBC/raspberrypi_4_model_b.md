@@ -60,3 +60,9 @@ Would you like to proceed? (y/N)
  *** If no errors appeared, your firmware was successfully updated to 224cd2fe45becbb44fea386399254a1f84227218
  *** A reboot is needed to activate the new firmware
 ```
+
+### kernel header の指定バージョンをインストールする
+
+以下から探す
+
+http://archive.raspberrypi.org/debian/pool/main/r/raspberrypi-firmware/
