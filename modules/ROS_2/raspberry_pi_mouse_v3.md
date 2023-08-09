@@ -23,3 +23,5 @@ $ ls -la /opt/ros/foxy/share/raspimouse_msgs/msg/*.msg
   - rtmouse.ko
 
 Nerves で使うには custom_rpi4 を作って、そこで rtmouse.ko を作らせる必要がありそう。
+
+作った。 https://github.com/pojiro/nerves_system_rpi4_mouse
