@@ -7,6 +7,10 @@ tags: []
 
 ### Links
 
+- [ブートプロセス](https://digilent.com/reference/programmable-logic/zybo-z7/reference-manual?redirect=1#zynq_configuration)
+  - ステージ 0, 1, 2 について
+- [SD ブートモード](https://digilent.com/reference/programmable-logic/zybo-z7/reference-manual?redirect=1#microsd_boot_mode)
+
 ### [Zybo Z7 Petalinux Demo](https://digilent.com/reference/programmable-logic/zybo-z7/demos/petalinux)
 
 試した組み合わせ
