@@ -33,6 +33,8 @@ chmod u+x ~/Downloads/petalinux-v2022.1-04191534-installer.run
 
 ```
 [0|]pojiro@Endeavor-Pro9050a:~/Sandbox$
+source ~/petalinux/2022.1-04191534/settings.sh
+[0|]pojiro@Endeavor-Pro9050a:~/Sandbox$
 petalinux-create -t project -s ~/Downloads/Zybo-Z7-10-Petalinux-2022-1.bsp
 INFO: Create project: 
 INFO: Projects: 
@@ -75,6 +77,9 @@ config       rootfs.cpio.gz  rootfs.manifest        u-boot-dtb.bin  uImage
 
 ※以下、未検証
 
-ジャンパーを適切に設定して、 SD をさして、電源を入れる。
+ジャンパーを適切に設定（電源を wall, 起動をSD ）して、 SD をさして、電源を入れる。
 
 PROG UART のシリアルコンソールで 115200 で起動ログが見れるはず。
+
+リモートで動作確認してもらった際には、 PROG UART は見れず、
+HDMI （TX記載側 ） に出力があり、 USB HOST となるようジャンパしてキーボード入力できるようにして root:root でログインできた。
