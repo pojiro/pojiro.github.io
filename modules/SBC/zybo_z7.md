@@ -75,11 +75,18 @@ config       rootfs.cpio.gz  rootfs.manifest        u-boot-dtb.bin  uImage
 
 #### ブート
 
-※以下、未検証
+ジャンパーを電源を WALL、起動をSD に設定し、 SD を挿して電源を入れる。
 
-ジャンパーを適切に設定（電源を wall, 起動をSD ）して、 SD をさして、電源を入れる。
+Micro USB Type-B の PROG UART は電源投入後でないとホスト側で認識できない。
 
-PROG UART のシリアルコンソールで 115200 で起動ログが見れるはず。
+手元の Linux Mint では 電源投入後に /dev/ttyUSB0, /dev/ttyUSB1 を認識し、
 
-リモートで動作確認してもらった際には、 PROG UART は見れず、
-HDMI （TX記載側 ） に出力があり、 USB HOST となるようジャンパしてキーボード入力できるようにして root:root でログインできた。
+```
+screen /dev/ttyUSB1 115200
+```
+
+で起動ログを確認できた。
+
+また、 HDMI （TX記載側 ） でも出力を確認でき、 USB HOST となるようジャンパするとキーボード入力できるようになる。
+
+root:root でログインできる。
