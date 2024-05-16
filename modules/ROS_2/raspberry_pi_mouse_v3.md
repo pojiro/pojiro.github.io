@@ -20,8 +20,16 @@ $ ls -la /opt/ros/foxy/share/raspimouse_msgs/msg/*.msg
 ### デバイスドライバ
 
 - https://github.com/rt-net/RaspberryPiMouse
-  - rtmouse.ko
+
+カーネルモジュールの名前は rtmouse.ko 、できるデバイスファイルのそれぞれは以下に記載されている
+
+https://github.com/rt-net/RaspberryPiMouse#device-files
 
 Nerves で使うには custom_rpi4 を作って、そこで rtmouse.ko を作らせる必要がありそう。
 
-作った。 https://github.com/pojiro/nerves_system_rpi4_mouse
+custom_rpi4 を https://github.com/pojiro/nerves_system_rpi4_mouse として作った。  
+rtmouse.ko はビルドのプロセスで生成し取り込むようにできた。
+
+### Raspimouse Node
+
+https://github.com/rt-net/raspimouse2
