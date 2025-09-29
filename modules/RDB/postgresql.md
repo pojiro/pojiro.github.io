@@ -5,6 +5,36 @@ categories: ["RDB"]
 tags: []
 ---
 
+### dump して restore
+
+ダンプ
+
+```
+pg_dump --host=localhost --port=5432 --username=postgres --dbname=db_name --format=c --file=file.dump
+```
+
+別サーバの postgresql の postgres ユーザにパスワード設定
+
+```
+sudo su - postgres # local postgres の場合
+psql
+ALTER ROLE postgres WITH PASSWORD 'password';
+\q
+```
+
+DB 作成
+
+```
+mix ecto.create # phoenix の場合
+```
+
+リストア
+
+```
+sudo su -u postgres # local postgres の場合
+pg_restore --db_name=db_name --no-owner /path/to/file.dump
+```
+
 ### トランザクション分離レベル
 
 ```
