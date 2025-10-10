@@ -36,6 +36,8 @@
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'ROS 2'" %}
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
+  {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'SoftEther VPN'" %}
+  <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
   {% assign pages = site.pages | where_exp: "item", "item.categories[0] == 'Unclassified'" %}
   <li><ul>{% include modules_menu.html collection=pages %}</ul></li>
 </ul>
